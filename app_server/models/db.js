@@ -1,5 +1,9 @@
 var mongoose = require( 'mongoose' );
 var dbURI = 'mongodb://localhost/Loc8r';
+
+if(process.env.NODE_ENV === 'production') {
+	dbURI = 'mongodb://ajimmer:Soler1011!@ds029725.mlab.com:29725/heroku_ptk15ftm';
+}
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function () {

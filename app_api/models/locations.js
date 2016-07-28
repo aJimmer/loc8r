@@ -5,7 +5,7 @@ var openingTimeSchema = new mongoose.Schema({
   opening: String,
   closing: String,
   closed: {type: Boolean, required: true}
-});
+}); 
 
 var reviewSchema = new mongoose.Schema({
   author: String,
